@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "IntranetSatel"
+    }
+  },
+  "defaultProject": "IntranetSatel",
+  "cli": {
+    "analytics": false
+  }
 }
