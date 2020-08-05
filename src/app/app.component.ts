@@ -29,7 +29,13 @@ export class AppComponent {
   //Crear Usuario
 
   //Agregar usuario con formulario
-
+  agregarUsuario(nuevoUsuario){
+    nuevoUsuario.focus();
+    console.log(nuevoUsuario.value);
+    this.usuarios.push(nuevoUsuario.value);
+    nuevoUsuario.value = '';
+    return false;
+  }
 
   //Agregar usuario con formulario
 
@@ -39,6 +45,7 @@ export class AppComponent {
   sayHello(u){
     alert('Hola '+u);
   }
+
 
   deleteUser(u){
       for (let i = 0; i < this.usuarios.length; i++) {

@@ -1,8 +1,11 @@
 <app-hola-hack></app-hola-hack>
+_______________________________________________<br>
+
 <ul>
     <app-user *ngFor="let user of users" [nameUser]="user"></app-user>  
 </ul>
 <h3 *ngIf="activated">Esta activado</h3>
+_______________________________________________<br>
 <!--Logica de variables-->
 Variables
 <div>
@@ -13,6 +16,16 @@ Variables
     <li *ngFor="let h of hobbies">{{h}}</li>
   </ul>
 </div>
+_______________________________________________<br>
+<!--Agregar usuario con formulario-->
+
+Agregar usuario
+  <form (submit)="agregarUsuario(nuevoUsuario)">
+    <input type="text" #nuevoUsuario>
+      <button>Agregar usuario</button>
+  </form>
+<!--Agregar usuario con formulario-->
+
 <!--Acciones con boton-->
   <ul>
     <li *ngFor="let u of usuarios" >
@@ -23,3 +36,4 @@ Variables
   </ul>
 
 <!--Acciones con boton-->
+_______________________________________________<br>
