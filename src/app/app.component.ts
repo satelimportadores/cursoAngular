@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from "./data.service";
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,10 @@ export class AppComponent {
   activated: boolean = true;
   nombre: string = 'Satel Importadores';
   edad: number = 35;
+  posts = [];
   //declaracion de variables
 
+  
   //Crear Usuario
     name: string = 'Juan Romero';
     age: number;
@@ -23,15 +26,23 @@ export class AppComponent {
       city: string;
     };
     hobbies:string[];
-      //constructor
-          constructor(){
+
+    //Metodo Constructor
+          constructor(private dataservice: DataService){
             this.age = 28;
             this.address = {
               street: '221',
               city:'Bogota'
             }
             this.hobbies= ['swming','read','write'];
+              //Traer datos de jsonplaceholder
+                this.dataservice.obtenerDatos().subscribe(data => {
+                 this.posts = data;
+                });
+            //Traer datos de jsonplaceholder
           }
+    //Metodo Constructor  
+
   //Crear Usuario
 
   //Agregar usuario con formulario
@@ -62,4 +73,6 @@ export class AppComponent {
     }
 
   //Acciones con boton
+
+
 }

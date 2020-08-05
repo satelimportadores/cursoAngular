@@ -1,3 +1,4 @@
+_______________________________________________<br>
 <app-hola-hack></app-hola-hack>
 _______________________________________________<br>
 
@@ -49,3 +50,10 @@ _______________________________________________<br>
   Edad: {{edad}}
 </div>
 <!--Formulario para editar un dato de usuario-->
+_______________________________________________<br>
+<!--https://jsonplaceholder.typicode.com/posts-->
+<div *ngFor="let post of posts">
+  <h3>{{post.title}}</h3>
+  <p>{{post.body}}</p>
+</div>
+<!--https://jsonplaceholder.typicode.com/posts-->
