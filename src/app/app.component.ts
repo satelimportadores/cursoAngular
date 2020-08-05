@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //declaracion de variables
+
   title = 'Usuarios Intranet Satel';
   users = ['user1','user2','user3','user4','user5'];
   activated: boolean = true;
+  nombre: string = 'Satel Importadores';
+  edad: number = 35;
+  //declaracion de variables
+
   //Crear Usuario
     name: string = 'Juan Romero';
     age: number;
